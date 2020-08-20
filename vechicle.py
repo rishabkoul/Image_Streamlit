@@ -5,6 +5,7 @@ import numpy as np
 import os
 
 from tensorflow.keras.models import load_model
+import tensorflow as tf
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
@@ -22,6 +23,7 @@ def import_and_predict(image_data, model):
     image = ImageOps.fit(image_data, size)
     img = np.asarray(image)
     img_reshape = img[np.newaxis, ...]
+    img_reshape = tf.cast(img_reshape, tf.float32)
     preds = model.predict(img_reshape)
     top3 = sorted(range(len(preds[0])), key=lambda i: preds[0][i])[-3:]
     top3.reverse()
