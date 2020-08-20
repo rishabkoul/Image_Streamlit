@@ -6,6 +6,8 @@ import os
 
 from tensorflow.keras.models import load_model
 
+st.set_option('deprecation.showfileUploaderEncoding', False)
+
 
 @st.cache(allow_output_mutation=True)
 def loadmodel():
