@@ -48,6 +48,7 @@ def main():
         st.subheader("Classify Vechicles")
         st.subheader(
             "This app can identify bike, boat, bus, car, cycle,helicopter, plane, scooty, train and truck")
+        st.write("For more info see about section")
 
         image_file = st.file_uploader(
             "Upload Image", type=['jpg', 'png', 'jpeg'])
@@ -62,6 +63,10 @@ def main():
         st.subheader('About')
         st.write(
             'This app was made using the vechicle dataset on Kaggle [https://www.kaggle.com/rishabkoul1/vechicle-dataset](https://www.kaggle.com/rishabkoul1/vechicle-dataset)')
+        st.write(
+            'Code of this app - [https://github.com/rishabkoul/ImageClassifier](https://github.com/rishabkoul/ImageClassifier)')
+        st.write(
+            'Code of model building - [https://www.kaggle.com/rishabkoul1/80-val-accuracy-with-vgg16-transfer-learning](https://www.kaggle.com/rishabkoul1/80-val-accuracy-with-vgg16-transfer-learning)')
 
 
 if __name__ == "__main__":
