@@ -37,15 +37,17 @@ def import_and_predict(image_data, model):
 
 def main():
     model = loadmodel()
-    """Image Classification App"""
+    """Vechicle Identification App"""
 
-    st.title("Image Classification App")
+    st.title("Vechicle Identification App")
 
-    activities = ['Classification', 'About']
+    activities = ['Identification', 'About']
     choice = st.sidebar.selectbox("Select Activity", activities)
 
-    if choice == 'Classification':
+    if choice == 'Identification':
         st.subheader("Classify Vechicles")
+        st.subheader(
+            "This app can identify bike, boat, bus, car, cycle,helicopter, plane, scooty, train and truck")
 
         image_file = st.file_uploader(
             "Upload Image", type=['jpg', 'png', 'jpeg'])
@@ -58,7 +60,8 @@ def main():
 
     elif choice == 'About':
         st.subheader('About')
-        st.write('This app was made by Rishab Koul with streamlit')
+        st.write(
+            'This app was made using the vechicle dataset on Kaggle [https://www.kaggle.com/rishabkoul1/vechicle-dataset](https://www.kaggle.com/rishabkoul1/vechicle-dataset)')
 
 
 if __name__ == "__main__":
